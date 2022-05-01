@@ -43,9 +43,14 @@ dependencies {
 	testAnnotationProcessor 'org.projectlombok:lombok'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// 쿼리에서 (?) 부분 확인하는 라이브러리
+	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.8.0'
+
+	implementation 'org.jetbrains:annotations:23.0.0'
 }
 
-test {
+tasks.named('test') {
 	useJUnitPlatform()
 }
 
